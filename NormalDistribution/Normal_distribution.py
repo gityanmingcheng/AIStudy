@@ -51,6 +51,7 @@ def show1():
              s='cym,测试下正太分布曲线的快乐，$ y\\sim \\mathcal{N}(\\mu,\\sigma) $ , given $\\mu = 0$ and $\\sigma = 1$'
              , fontsize=19, alpha=.88)
 
+    plt.savefig('1.png', bbox_inches='tight')
     plt.show()
 
 #均值
@@ -77,6 +78,7 @@ def show2():
              s='cym,测试下正太分布曲线的快乐，$ y\\sim \\mathcal{N}(\\mu,\\sigma) $ , given $\\mu = (0/2/-2)$ and $\\sigma = 1$'
              , fontsize=19, alpha=.88)
 
+    plt.savefig('2.png', bbox_inches='tight')
     # plt.savefig('fig.png', bbox_inches ='tight')
     plt.show()
 
@@ -105,7 +107,7 @@ def show3():
     plt.text(x=-4, y=.9,
              s='cym,测试下正太分布曲线的快乐，$ y\\sim \\mathcal{N}(\\mu,\\sigma) $ , given $\\mu = 0$ and $\\sigma = (1/2/0.5)$'
              , fontsize=19, alpha=.88)
-
+    plt.savefig('3.png', bbox_inches='tight')
     # plt.savefig('fig.png', bbox_inches ='tight')
     plt.show()
 
@@ -127,6 +129,7 @@ def show4():
     x_s = np.linspace(-3,4,50)
     y_s = stats.norm.pdf(x_s)
     plt.scatter(x_s,y_s)
+    plt.savefig('4.png', bbox_inches='tight')
     plt.show()
 
     print("P(X < 0.3) = {}".format(stats.norm.cdf(0.3)))
@@ -165,9 +168,14 @@ def show5():
              s='cym,测试下正太分布曲线的快乐，$ y\\sim \\mathcal{N}(\\mu,\\sigma) $ , given $\\mu = 0$ and $\\sigma = (1/2/0.5)$'
              , fontsize=19, alpha=.88)
 
+    plt.savefig('5.png', bbox_inches='tight')
     plt.show()
 
-    pass
+
+show1()
+show2()
+show3()
+show4()
 show5()
 
 
