@@ -1,8 +1,7 @@
 # 正太分布
-
 正太分布图收到两个参数影响   
-$ \\mu$     ==```loc```    
-$ \\sigma$  ==```scale```
+$ \\mu$     ==```loc # 均值```    
+$ \\sigma$  ==```scale # 标准差```
 
 ## 绘制第一个正态分布图
 > 引包
@@ -65,7 +64,45 @@ mac/Window 系统处理方式有一点点的区别，大家可以自行参考下
     
 > 执行效果
 
+[我的第一张正态分布图](static/1.png)
 ![我的第一张正态分布图](static/1.png)
+
+
+## 均值
+$ \\mu$     ==```loc # 均值```    
+> 代码
+```
+def show2():
+    plt.figure(dpi=100)
+    # PDF MU = 0
+    plt.plot(np.linspace(-4,4,100),stats.norm.pdf(np.linspace(-4,4,100)))
+    plt.fill_between(np.linspace(-4,4,100),stats.norm.pdf(np.linspace(-4,4,100)),alpha=.75)
+    # PDF MU = -2
+    plt.plot(np.linspace(-4, 4, 100), stats.norm.pdf(np.linspace(-4, 4, 100) ,loc=-2))
+    plt.fill_between(np.linspace(-4, 4, 100), stats.norm.pdf(np.linspace(-4, 4, 100),loc=-2), alpha=.75)
+
+    # PDF MU = 2
+    plt.plot(np.linspace(-4, 4, 100), stats.norm.pdf(np.linspace(-4, 4, 100),loc=2))
+    plt.fill_between(np.linspace(-4, 4, 100), stats.norm.pdf(np.linspace(-4, 4, 100),loc=2), alpha=.75)
+
+    # LEGEND
+    plt.text(x=-1,y=0.35,s="$ \mu = 0 $",rotation=65,alpha=.7,weight="bold",color="#008fd5")
+    plt.text(x=1,y=0.35,s="$ \mu = 2 $",rotation=65,alpha=.7,weight="bold",color="#fc4f30")
+    plt.text(x=-3,y=0.35,s="$ \mu = -2 $",rotation=65,alpha=.7,weight="bold",color="#e5ae38")
+    # TITLE
+    plt.text(x=-4, y=.51, s="cym Nromal", fontsize=25, weight='bold', alpha=.7)
+    plt.text(x=-4, y=.43,
+             s='cym,测试下正太分布曲线的快乐，$ y\\sim \\mathcal{N}(\\mu,\\sigma) $ , given $\\mu = (0/2/-2)$ and $\\sigma = 1$'
+             , fontsize=19, alpha=.88)
+
+    plt.savefig('static/2.png', bbox_inches='tight')
+    # plt.savefig('fig.png', bbox_inches ='tight')
+    plt.show()
+`````
+> 图形展示
+
+[均值（$ \\mu$）不同的效果图](static/2.png)
+![均值（$ \\mu$）不同的效果图](static/2.png)
 
 
 
