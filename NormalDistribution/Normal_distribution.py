@@ -173,9 +173,9 @@ def show5():
 
 
 show1()
-show2()
-show3()
-show4()
-show5()
+# show2()
+# show3()
+# show4()
+# show5()
 
 
