@@ -104,6 +104,7 @@ def show2():
 > PlotShow
 
 均值 $ \mu$ [不同的效果图](static/2.png)
+
 ![均值（$ \\mu$）不同的效果图](static/2.png)
 
 ## 标准差 scale
@@ -140,7 +141,7 @@ def show3():
 
 > PlotShow
 
-标准差 $ \sigma [不同的效果图](static/3.png)
+标准差 $ \sigma$ [不同的效果图](static/3.png)
 ![标准差（$ \\sigma$）不同的效果图](static/3.png)
 
 ## 概率密度(probability density Function) & Cumulative distribution function
