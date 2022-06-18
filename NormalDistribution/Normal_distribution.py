@@ -140,10 +140,12 @@ def show4():
 
 
 def show5():
+    #真实的数据
     mu_real = 10
     sigma_real = 2
     np.random.seed(42)
     sample = stats.norm.rvs(loc=mu_real,scale=sigma_real,size=1000)
+    # 计算出样本数据的均值+ 标准差
     mu_est = np.mean(sample)
     sigma_est = np.std(sample)
     print("Estimated MU:{}\nEstimated SIGMA:{}".format(mu_est,sigma_est))
