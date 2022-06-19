@@ -3,7 +3,7 @@
 以分享待学，不为是一种学习方式。
 
 ## 正态分布 （Normal distribution）
-[正态分布学习—绘制](NormalDistribution/README.md)
+[正态分布学习—绘制](NormalDistribution)
 
 ## 二项分布 （Binomial distribution）
-[二项分布学习](BinomialDistribution/README.md)
+[二项分布学习](BinomialDistribution)
