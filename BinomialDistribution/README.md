@@ -165,6 +165,7 @@ def sample():
 
 > 输出结果（Output results）
 
+
 out:
 ```shell script
 P(x<= 3) = 0.6496107184000002
