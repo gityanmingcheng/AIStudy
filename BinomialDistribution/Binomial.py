@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import matplotlib.style as style
 
 
-# print(style.available)
+# PLOTTING CONFIG 绘图配置
 style.use('fivethirtyeight')
 plt.figure(dpi=100,figsize=(14,7))
 #### font.sans-serif 解决中文乱码问题
@@ -134,6 +134,30 @@ def sample():
     print( "P(x<= 3) = {}".format(stats.binom.cdf(k=3,p=0.3,n=10)))
     print( "P(2< x <= 8) = {}".format(stats.binom.cdf(k=8,p=0.3,n=10) - stats.binom.cdf(k=2,p=0.3,n=10)))
 
-# sample()
+
+
+#在保险业务中，我们经常需要根据实际情况适当调整保费问题，以保证保险公司的利润达到一定要求，同时保险公司的业务量也达到要求，对于这一类问题，
+# 可以对已知实际情况做一定的概率分析。例如某保险公司有10000客户购买人身意外保险，该公司规定每人每年付公司120元 ，若遇意外死亡，
+# 公司将赔偿10000元。若每人每年死亡率为0.006，从而不难利用二项分布算出公司获利、亏本的各种情形了。实际上对于随机现象，了解其分布非常有意义，
+# 利用概率论讨论得到的结果对保险公司有一定的指导意义。
+
+def sample2():
+    # 定义随机种子
+    np.random.seed(42)
+    # 采样一个
+    print(stats.binom.rvs(p=0.006,n=10))
+    # 采样 10 个
+    print(stats.binom.rvs(p=0.006,n=10,size=10))
+    # Probability mass function 概率质量函数
+    x_s = np.arange(11)
+    y_s = stats.binom.pmf(x_s,p=.006,n=10)
+    plt.scatter(x_s,y_s,s=100)
+    plt.savefig('static/5.png', bbox_inches='tight')
+    plt.show()
+    # Cumulative distribution function
+    print( "P(x<= 3) = {}".format(stats.binom.cdf(k=1,p=0.006,n=10)))
+    print( "P(2< x <= 8) = {}".format(stats.binom.cdf(k=8,p=0.006,n=10) - stats.binom.cdf(k=2,p=0.006,n=10)))
+
+sample()
 # binomial2()
-binomial3()
+# binomial3()
