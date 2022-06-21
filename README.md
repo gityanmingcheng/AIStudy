@@ -7,3 +7,6 @@
 
 ## 二项分布 （Binomial distribution）
 [二项分布学习](BinomialDistribution)
+
+## 均匀分布（Uniform distribution）
+[二项分布学习](UniformDistribution)
