@@ -8,5 +8,8 @@
 ## 二项分布 （Binomial distribution）
 [二项分布学习](BinomialDistribution)
 
+## 泊松分布（Poisson distribution）
+[泊松分布学习](PoissonDistribution)
+
 ## 均匀分布（Uniform distribution）
-[二项分布学习](UniformDistribution)
+[均匀分布学习](UniformDistribution)
